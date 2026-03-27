@@ -51,7 +51,9 @@ The mean and median IoU are nearly equal (0.160 vs. 0.166), indicating a reasona
 
 ### 3.2 Success Cases
 
-
+<p align="center">
+  <img src="assets/success_cases.png" width="400" alt="Success Cases">
+</p>
 *(Figure 1: Success Cases — Grad-CAM++ Correctly Localizes Waste Objects)*
 
 In **Figure 1**, rows 1 and 2 (Peak IoU 0.374 and 0.366) show the pipeline at its best. Scenes contain dense piles of plastic bottles, packaging bags, and colored cans against a dark conveyor belt background. The Grad-CAM++ heatmap (column 2) concentrates its highest activations — the red and yellow regions in the jet colormap — directly over the waste objects rather than the belt surface. The contrast between the colorful, geometrically complex waste and the uniform dark belt provides strong discriminative signal, and the gradient correctly attributes classification confidence to those foreground regions.
@@ -64,6 +66,9 @@ Row 5 (high confidence, IoU 0.207) shows a very dense pile where the heatmap is 
 
 ### 3.3 Failure Cases and Critical Analysis
 
+<p align="center">
+  <img src="assets/failure_audit.png" width="400" alt="Failure Audit">
+</p>
 *(Figure 2: Failure Audit — Three Distinct Failure Modes)*
 
 **Figure 2** documents three structurally distinct failure modes, each with a different root cause.
